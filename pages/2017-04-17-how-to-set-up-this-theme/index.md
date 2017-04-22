@@ -1,10 +1,10 @@
 ---
-title: テーマ設定方法
+title: How to set up this theme
 date: "2017-04-04T00:19:00.000Z"
 path: "/how-to-set-up-this-theme"
 ---
-## テーマカラー設定
-ヘッダーやフッター、リンクのカラーを変更すること可能です。
+## Set up a theme color
+It is possible to change the header, footer, link color.
 
 ```scss
 ...
@@ -12,9 +12,9 @@ $primaryColor: #9347A0;
 $secondaryColor: #586365;
 ...
 ```
-`css/style.scss`の`$primaryColor`と`$secondaryColor`の値を変更します。
+Change the value of `$ primaryColor` and` $ secondaryColor` in `css / style.scss`.
 
-## 著者情報設定
+## Set up an author bio
 ```yml
 authorName = "kentaro-m"
 authorDetail = "I'm a application engineer."
@@ -22,16 +22,16 @@ twitterId = ""
 facebookId = ""
 githubId = "kentaro-m"
 ```
-著者情報の設定は`config.toml`の値を変更します。
+Setting of author bio changes the value of `config.toml`.
 
-## Analytics設定
+## Set up Google Analytics
 ```yml
 googleAnalyticsId = ""
 ```
-Google Analyticsでアクセス情報を取得したい場合は`config.toml`にトラッキングIDを設定します。
+If you want to get access information with Google Analytics, set the tracking ID in `config.toml`.
 
-## シンタックスハイライトのテーマ変更
+## Change theme of syntax highlight
 ```yml
 syntaxTheme = "atom-one-dark"
 ```
-シンタックスハイライトは[highlight.js](https://highlightjs.org/)を使用しています。使用可能なテーマは[こちら](https://github.com/isagalaev/highlight.js/tree/master/src/styles)を確認してください。デフォルトはAtom One Darkが設定されています。
+Syntax highlighting uses [highlight.js](https://highlightjs.org/). Please check available themes [here](https://github.com/isagalaev/highlight.js/tree/master/src/styles). The default is Atom One Dark.

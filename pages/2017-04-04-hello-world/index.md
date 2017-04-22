@@ -1,53 +1,53 @@
 ---
-title: はじめに
+title: Hello World
 date: "2017-04-04T00:19:00.000Z"
 path: "/hello-world/"
 ---
-このテーマはHTML/CSSフレームワーク「[MUSUBii](https://qrac.github.io/musubii/)」をベースに作られています。
+This theme is based on the HTML / CSS framework "[MUSUBii](https://qrac.github.io/musubii/)".
 
-## ブログの始め方
-事前にNode.jsが使用できる環境を準備しておく必要があります。
+## How to start a blog
+It is necessary to prepare an environment that Node.js can use beforehand.
 
 ```
 $ npm install -g gatsby
 ```
-gatsbyをグローバルインストールします。
+global install "gatsby"
 
 ```bash
 $ gatsby new blog https://github.com/kentaro-m/gatsby-starter-undefined.git
 ```
-ブログを新規に作成します。
+Create a new blog.
 
 ```
 $ npm run develop
 ```
-作成したディレクトリ内で上記コマンドを実行すると、[http://localhost:8000](http://localhost:8000)でブログを確認することができます。
+Start a hot-reloading development server accessible at [http://localhost:8000](http://localhost:8000)
 
-## ブログをGitHub Pagesで公開する
-事前にGitHubにリポジトリを作成し、このプロジェクトをプッシュしておく必要があります。
+## Publish a blog on GitHub Pages
+It is necessary to create a repository in GitHub in advance and push this project.
 
 ```yml
-prefix = "/<リポジトリ名>"
+prefix = "/<repository name>"
 ```
-`config.toml`の`prefix`がリポジトリ名になっているかを確認する。デフォルトでは`username.github.io/リポジトリ名`にブログが公開される。
+Make sure `prefix` in `config.toml` is the repository name. By default the blog is published in `username.github.io/<repository name>.
 
 ```
 $ npm run deploy
 ```
-プロジェクトフォルダ以下で上記コマンドを実行すると、リモートの`gh-pages`ブランチにブログがデプロイされて公開となります。
+The blog will be deployed on the remote `gh-pages` branch and made public.
 
-## ブログをgithub.ioドメインのルートに公開する
-`username.github.io`直下にブログを公開したい場合は`utils`の`deploy.js`を使用する。
+## Publish a blog to root of github.io domain
+If you want to publish a blog directly under `username.github.io`, use` deploy.js`.
 
-まずはGitHubに`username.github.io`という名前のリポジトリを作成する。
+Create a repository named `username.github.io` in GitHub.
 
 ```javascript
 const options = {
-  repo: 'git@github.com:username/username.github.io.git', // usernameを自分のユーザー名に書き換える
+  repo: 'git@github.com:username/username.github.io.git',
   branch: 'master'
 }
 ```
-次に`deploy.js`を修正する。
+Modify `deploy.js`.
 
 ```json
 {
@@ -59,9 +59,9 @@ const options = {
   ...
 }
 ```
-`package.json`の`deploy`を上記のとおり書き換える。
+Rewrite `deploy` of` package.json` as described above.
 
 ```
 $ npm run deploy
 ```
-上記コマンド実行で`username.github.io`直下にブログが公開されます。
+A blog is published to `username.github.io`.
