@@ -29,7 +29,7 @@ It is necessary to create a repository in GitHub in advance and push this projec
 ```yml
 prefix = "/<repository name>"
 ```
-Make sure `prefix` in `config.toml` is the repository name. By default the blog is published in `username.github.io/<repository name>.
+Make sure `prefix` in `config.toml` is the repository name. By default the blog is published in `username.github.io/<repository name>.`
 
 ```
 $ npm run deploy
