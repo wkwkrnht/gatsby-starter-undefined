@@ -1,10 +1,6 @@
 # gatsby-starter-undefined
 Gatsby starter for creating a blog
 
-![](./images/gatsbyjs001.png)
-
-![](./images/gatsbyjs002.png)
-
 ## Features
 * Simple Layout
 * Select a theme (primary/secondary color)
@@ -24,7 +20,12 @@ Install this starter (assuming Gatsby is installed) by running from your CLI: `g
 $ gatsby develop
 ```
 
+## Screen Shots
+![](./images/gatsbyjs001.png)
+Top page
 
+![](./images/gatsbyjs002.png)
+Single page
 
 ## License
 MIT
