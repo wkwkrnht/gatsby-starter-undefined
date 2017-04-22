@@ -10,7 +10,7 @@ Gatsby starter for creating a blog
 * Author Bio
 
 ## Demo
-[http://fishmonger-dolphin-53410.netlify.com/](http://fishmonger-dolphin-53410.netlify.com/)
+[https://undefined.netlify.com/](https://undefined.netlify.com/)
 
 ## Install
 Install this starter (assuming Gatsby is installed) by running from your CLI: `gatsby new blog https://github.com/kentaro-m/gatsby-starter-undefined`
