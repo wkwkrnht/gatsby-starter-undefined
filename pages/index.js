@@ -1,8 +1,9 @@
+import 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react'
 import { Link } from 'react-router'
 import sortBy from 'lodash/sortBy'
-import get from 'lodash.get'
+import get from 'lodash/get'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from "react-helmet"
 import { config } from 'config'
