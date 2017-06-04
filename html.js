@@ -30,9 +30,9 @@ module.exports = class extends React.Component {
                     {head.title.toComponent()}
                     {head.meta.toComponent()}
                     {css}
-                    <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
                 </head>
                 <body id="react-mount" dangerouslySetInnerHTML={{ __html: body }}>
+                    <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
                 </body>
             </html>
         )
