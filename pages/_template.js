@@ -36,9 +36,9 @@ class Template extends React.Component {
 
     return (
         {header}
-        <main>
+        <div>
             {children}
-        </main>
+        </div>
     )
   }
 }
