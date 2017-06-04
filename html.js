@@ -30,8 +30,6 @@ module.exports = class extends React.Component {
                     {head.title.toComponent()}
                     {head.meta.toComponent()}
                     {css}
-                    {css-list}
-                    {css-post}
                 </head>
                 <body>
                     <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
