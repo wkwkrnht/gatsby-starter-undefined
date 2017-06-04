@@ -1,4 +1,3 @@
-import 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react'
 import { Link } from 'react-router'
@@ -15,8 +14,8 @@ class BlogIndex extends React.Component {
     // Sort pages.
     const sortedPages = sortBy(this.props.route.pages, 'data.date').reverse()
     // Posts are those with md extension that are not 404 pages OR have a date (meaning they're a react component post).
-    const visiblePages = sortedPages.filter(page => (
-      get(page, 'file.ext') === 'md' && !include(page.path, '/404') || get(page, 'data.date')
+    const visiblePages = sortedPages.map().filter(page => (
+        get(page, 'file.ext') === 'md' && !include(page.path, '/404') || get(page, 'data.date')
     ))
     return (
         <div className="index">
