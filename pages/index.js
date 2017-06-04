@@ -18,8 +18,8 @@ class BlogIndex extends React.Component {
       get(page, 'file.ext') === 'md' && !include(page.path, '/404') || get(page, 'data.date')
     ))
     return (
-      <div className="index">
-        <Helmet
+        <div className="index">
+            <Helmet
             title={config.blogTitle}
             meta={[
                 {"name": "description", "content": "Sample blog"},
@@ -31,21 +31,21 @@ class BlogIndex extends React.Component {
             link={[
                 //{"rel": "stylesheet", "href": "https://fonts.googleapis.com/css?family=Tauri"},
             ]}
-        />
-        <ul className="card-list">
-            {visiblePages.map((page) => (
-                <li key={page.path} >
-                    <Link className="article-card" style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
-                        <img src={get(page, 'data.eyecatch', page.path)} alt="eyacatch" className="card-img" />
-                        <div className="card-meta">
-                            {get(page, 'data.title', page.path)}
-                            {moment(page.data.date).format('YYYY.MM.DD')}
-                        </div>
-                    </Link>
-                </li>
-            ))}
-        </ul>
-      </div>
+            />
+            <ul className="card-list">
+                {visiblePages.map((page) => (
+                    <li key={page.path} >
+                        <Link className="article-card" style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
+                            <img src={get(page, 'data.eyecatch', page.path)} alt="eyacatch" className="card-img" />
+                            <div className="card-meta">
+                                {get(page, 'data.title', page.path)}
+                                {moment(page.data.date).format('YYYY.MM.DD')}
+                            </div>
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
   }
 }
