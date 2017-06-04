@@ -28,26 +28,6 @@ class Template extends React.Component {
                 </span>
             </header>
         )
-    } elseif (location.pathname.indexOf('tag') !== -1) {
-        header = (
-            <header>
-                <h1>
-                    <Link
-                    style={{
-                        boxShadow: 'none',
-                        textDecoration: 'none',
-                        color: 'inherit',
-                    }}
-                    to={prefixLink('/')}
-                    >
-                        {get(page, 'data.title', page.path)} | {config.blogTitle}
-                    </Link>
-                </h1>
-                <span>
-                    &copy;{config.blogtitle}&nbsp;{config.startyear}
-                </span>
-            </header>
-        )
     } else {
         header = (
             <!--header-->
