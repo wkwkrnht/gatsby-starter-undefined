@@ -21,16 +21,6 @@ module.exports = class extends React.Component {
             css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
         }
 
-        let css-list
-        if (process.env.NODE_ENV === 'production') {
-            css-list = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles-list.css') }} />
-        }
-
-        let css-post
-        if (process.env.NODE_ENV === 'production') {
-            css-post = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles-post.css') }} />
-        }
-
         return (
             <html lang="ja-JP">
                 <head>

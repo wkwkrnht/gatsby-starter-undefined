@@ -4,5 +4,5 @@ import { config } from 'config';
 ReactGA.initialize(config.googleAnalyticsId);
 
 exports.onRouteUpdate = (state) => {
-  ReactGA.pageview(state.pathname);
+    ReactGA.pageview(state.pathname);
 };

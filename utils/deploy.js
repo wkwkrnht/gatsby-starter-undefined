@@ -1,4 +1,4 @@
-const ghpages = require('gh-pages')
+/*const ghpages = require('gh-pages')
 const path = require('path')
 
 const options = {
@@ -13,4 +13,4 @@ ghpages.publish(path.join(__dirname, '../public'), options, (error) => {
   } else {
     console.log('Deploying success')
   }
-})
+})*/
