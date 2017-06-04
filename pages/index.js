@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
             {visiblePages.map((page) => (
                 <li key={page.path} >
                     <Link className="article-card" style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
-                        <img src={get(page, 'data.eyecatch', page.path)} alt="eyacatch" className="card-img">
+                        <img src={get(page, 'data.eyecatch', page.path)} alt="eyacatch" className="card-img" />
                         <div className="card-meta">
                             {get(page, 'data.title', page.path)}
                             {moment(page.data.date).format('YYYY.MM.DD')}

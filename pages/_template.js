@@ -9,69 +9,56 @@ class Template extends React.Component {
     const { location, children } = this.props
     let header
     if (location.pathname === prefixLink('/')) {
-      header = (
-        <header>
-          <div className="section">
-            <div className="inner">
-              <h1>
-                <Link
-                  style={{
-                    boxShadow: 'none',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                  to={prefixLink('/')}
-                >
-                  {config.blogTitle}
-                </Link>
-              </h1>
-            </div>
-          </div>
-        </header>
-      )
+        header = (
+            <header>
+                <h1>
+                    <Link
+                    style={{
+                        boxShadow: 'none',
+                        textDecoration: 'none',
+                        color: 'inherit',
+                    }}
+                    to={prefixLink('/')}
+                    >
+                        {config.blogTitle}
+                    </Link>
+                </h1>
+                <span>
+                    &copy;{config.blogtitle}&nbsp;{config.startyear}
+                </span>
+            </header>
+        )
+    } elseif (location.pathname.indexOf('tag') !== -1) {
+        header = (
+            <header>
+                <h1>
+                    <Link
+                    style={{
+                        boxShadow: 'none',
+                        textDecoration: 'none',
+                        color: 'inherit',
+                    }}
+                    to={prefixLink('/')}
+                    >
+                        {get(page, 'data.title', page.path)} | {config.blogTitle}
+                    </Link>
+                </h1>
+                <span>
+                    &copy;{config.blogtitle}&nbsp;{config.startyear}
+                </span>
+            </header>
+        )
     } else {
-      header = (
-        <header>
-          <div className="section">
-            <div className="inner">
-              <h3>
-                <Link
-                  style={{
-                    boxShadow: 'none',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                  to={prefixLink('/')}
-                >
-                  {config.blogTitle}
-                </Link>
-              </h3>
-            </div>
-          </div>
-        </header>
-      )
+        header = (
+            <!--header-->
+        )
     }
 
-    const footer = (
-      <footer>
-        <div className="section">
-          <div className="inner">
-            © Undefined
-          </div>
-        </div>
-      </footer>
-    )
-
     return (
-      <div>
         {header}
-        <div className="container section">
-          <div className="inner">
+        <main className="">
             {children}
-          </div>
-        </div>
-        {footer}
-      </div>
+        </main>
     )
   }
 }

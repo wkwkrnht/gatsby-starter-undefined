@@ -18,20 +18,21 @@ class MarkdownWrapper extends React.Component {
             <Helmet
                 title={`${post.title} | ${config.blogTitle}`}
                 link={[
-                    //{"rel": "stylesheet", "href": "https://fonts.googleapis.com/css?family=Tauri"},
                     {"rel": "stylesheet", "href": `//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/${config.syntaxTheme || 'default'}.min.css`},
                 ]}
             />
-            <h1 className="heading is-xxl is-strong">{post.title}</h1>
-            <div
-                style={{
-                    display: 'block',
-                    margin: '15px 0',
-                }}
-                >
-            {moment(post.date).format('YYYY.MM.DD')}
-            </div>
-            <Highlight innerHTML={true} className="wysiwyg">{post.body}</Highlight>
+            <header className="article-header">
+                <img src={get(page, 'data.eyecatch', page.path)} alt="eyacatch" className="card-img" />
+                <div>
+                    <h1 className="heading is-xxl is-strong">
+                        {post.title}
+                    </h1>
+                    {moment(post.date).format('YYYY.MM.DD')}
+                </div>
+            </header>
+            <Highlight innerHTML={true} className="article-main">
+                {post.body}
+            </Highlight>
         </article>
     )
   }
