@@ -28,11 +28,15 @@ class Template extends React.Component {
                 </span>
             </header>
         )
+    } else {
+        header = (
+            <a style={{display:'none',}}></a>
+        )
     }
 
     return (
         {header}
-        <main className="">
+        <main>
             {children}
         </main>
     )
