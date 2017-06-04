@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "author": "Kentaro Matsushita",
     "dependencies": {
-        "gatsby": "^0.12.46",
+        "gatsby": "^0.12.47",
         "lodash": "^4.17.4",
         "moment": "^2.17.1",
         "musubii": "^2.0.0",

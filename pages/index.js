@@ -33,17 +33,21 @@ class BlogIndex extends React.Component {
             ]}
             />
             <ul className="card-list">
-                {visiblePages.map((page) => (
-                    <li key={page.path} >
-                        <Link className="article-card" style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
-                            <img src={get(page, 'data.eyecatch', page.path)} alt="eyacatch" className="card-img" />
-                            <div className="card-meta">
-                                {get(page, 'data.title', page.path)}
-                                {moment(page.data.date).format('YYYY.MM.DD')}
-                            </div>
-                        </Link>
-                    </li>
-                ))}
+                {
+                    visiblePages.map(
+                        (page) => (
+                            <li key={page.path}>
+                                <Link className="article-card" style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
+                                    <img src={get(page, 'data.eyecatch', page.path)} alt="eyacatch" className="card-img" />
+                                    <div className="card-meta">
+                                        {get(page, 'data.title', page.path)}
+                                        {moment(page.data.date).format('YYYY.MM.DD')}
+                                    </div>
+                                </Link>
+                            </li>
+                        )
+                    )
+                }
             </ul>
         </div>
     )
