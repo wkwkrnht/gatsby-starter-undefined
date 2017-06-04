@@ -28,10 +28,6 @@ class Template extends React.Component {
                 </span>
             </header>
         )
-    } else {
-        header = (
-            <!--header-->
-        )
     }
 
     return (
